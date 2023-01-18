@@ -1,0 +1,15 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<div class="mt-5">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table class="table">
+      {{ form.as_table }}
+    </table>
+    <div class="d-grid gap-2 col-4 mx-left">
+      <input type="submit" class="btn btn-success" value="送信">
+    </div>
+  </form>
+</div>
+{% endblock content %}
